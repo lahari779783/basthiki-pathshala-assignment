@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register - Basti Ki Pathshala</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .main-container {
+        display: flex;
+        flex: 1;
+      }
+
+      .sidebar {
+        width: 220px;
+        background-color: #343a40;
+        padding-top: 20px;
+        color: white;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .sidebar a:hover {
+        background-color: #495057;
+      }
+
+      .content {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .form-card {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .form-control {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-dark bg-dark px-4">
+      <span class="navbar-brand mb-0 h1">Basti Ki Pathshala</span>
+    </nav>
+
+    <div class="main-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h5 class="text-center">Navigation</h5>
+        <a href="/">🏠 Home</a>
+        <a href="/register">📝 Register</a>
+        <a href="/admin">📋 Admin</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <h2 class="text-center mb-4">Register as a Volunteer</h2>
+
+        <div class="card shadow form-card">
+          <div class="card-body">
+            <form method="POST" action="/register">
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="college" class="form-label">College</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="college"
+                  name="college"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="branch" class="form-label">Branch</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="branch"
+                  name="branch"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="year" class="form-label">Year</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="year"
+                  name="year"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contact" class="form-label">Contact Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact"
+                  name="contact"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
